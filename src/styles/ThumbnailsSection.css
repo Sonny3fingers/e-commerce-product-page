@@ -1,0 +1,48 @@
+.thumbnails {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 650px) {
+  .thumbnails {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 3rem;
+    max-width: 600px;
+    margin: 3rem auto 0;
+  }
+  .thumbnails .pic {
+    width: 20%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .thumbnails .pic:hover {
+    opacity: 0.75;
+  }
+  .thumbnails .pic img {
+    width: 100%;
+    pointer-events: none;
+  }
+  .thumbnails .pic img:hover {
+    opacity: 0.75;
+  }
+  .thumbnails .pic.active {
+    border: 2px solid #ff7d1a;
+  }
+  .thumbnails .pic.active img {
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=ThumbnailsSection.css.map */

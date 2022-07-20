@@ -1,0 +1,186 @@
+@import "styles.scss";
+
+.product {
+  // padding: 3.4rem 2.2rem 9rem 2.2rem;
+  padding: 3.4rem 2.2rem 9rem 2.2rem;
+  // max-width: 600px;
+  margin: auto;
+  .company {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $orange;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.2rem;
+  }
+  h1 {
+    text-transform: capitalize;
+    color: black;
+    font-size: 2.87rem;
+    letter-spacing: 1.1;
+    line-height: 1.16;
+    margin-bottom: 1.68rem;
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $grayish-blue;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+  .priceWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.2rem;
+  }
+  .group {
+    display: flex;
+    align-items: center;
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .discount {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $orange;
+      background-color: $pale-orange;
+      margin-left: 1.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  .old-price {
+    text-decoration: line-through;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $grayish-blue;
+  }
+  .counterWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $light-grayish-blue;
+    padding: 1.6rem 2.4rem;
+    border-radius: 1rem;
+    margin-bottom: 1.15rem;
+    input {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 1.3;
+      width: 20px;
+      font-size: 16px;
+      font-family: inherit;
+      font-weight: 700;
+      outline: none;
+      border: none;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+    }
+    #minusBtn,
+    #plusBtn {
+      cursor: pointer;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+        background-color: $pale-orange;
+      }
+    }
+  }
+  .btnAddToCart {
+    background-color: $orange;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+    height: 2rem;
+    padding: 2.8rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 20px 30px 0 $pale-orange;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      height: 1.5rem;
+      filter: brightness(300%);
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .product {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .product {
+    padding: 3rem 0 4rem 2rem;
+    .company {
+      margin-top: 4rem;
+      margin-bottom: 1.8rem;
+      font-size: 1.45rem;
+      font-weight: bolder;
+    }
+    .title {
+      font-size: 4.65rem;
+      line-height: 115%;
+      margin-bottom: 3.4rem;
+    }
+    p {
+      font-size: 1.78rem;
+      margin-bottom: 2.2rem;
+    }
+    .priceWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 3.75rem;
+      .old-price {
+        font-size: 1.8rem;
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2rem;
+      .counterWrapper {
+        width: 62%;
+        padding: 1.3rem 0.8rem;
+        border-radius: 1rem;
+        img {
+          padding: 1.2rem;
+        }
+        .counter {
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+      }
+      .btnAddToCart {
+        padding: 3rem;
+        font-size: 1.7rem;
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

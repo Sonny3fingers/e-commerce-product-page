@@ -1,0 +1,40 @@
+$orange: hsl(26, 100%, 55%);
+.thumbnails {
+  // display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 650px) {
+  .thumbnails {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    max-width: 600px;
+    margin: 3rem auto 0;
+    .pic {
+      width: 20%;
+      height: fit-content;
+      overflow: hidden;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.75;
+      }
+      img {
+        width: 100%;
+        pointer-events: none;
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+      &.active {
+        border: 2px solid $orange;
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

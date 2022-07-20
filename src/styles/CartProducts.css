@@ -1,0 +1,99 @@
+.cart {
+  position: absolute;
+  top: calc(100% + 1rem);
+  width: 95%;
+  left: 2.5%;
+  z-index: 1;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.1), 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.1), 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.cart .cartHeader {
+  border-bottom: 1px solid #b6bcc8;
+  padding: 2.4rem;
+}
+
+.cart .cartHeader h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.cart .productsInCart .item {
+  margin: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart .productsInCart .item .productImg {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+.cart .productsInCart .item .details {
+  color: #68707d;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.cart .productsInCart .item .details .priceGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.cart .productsInCart .item .details .priceGroup .totalAmount {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: black;
+}
+
+.cart .productsInCart .item #btnDelete {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.cart .productsInCart .item #btnDelete:hover {
+  cursor: pointer;
+  background-color: #ffede0;
+}
+
+.cart .productsInCart .checkout {
+  background-color: #ff7d1a;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2.4rem 2.4rem 3rem 2.4rem;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 395px) and (max-width: 600px) {
+  .cart {
+    left: 8%;
+    width: 84%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .cart {
+    position: absolute;
+    width: 35.5rem;
+    right: 1rem;
+    left: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=CartProducts.css.map */
